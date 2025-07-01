@@ -21,11 +21,11 @@ if 'Id' in df.columns:
 
 # Encode the target class 'species' as integers
 le = LabelEncoder()
-df['species'] = le.fit_transform(df['species'])
+df['Species'] = le.fit_transform(df['Species'])
 
 # Split features and target
-X = df.drop('species', axis=1).values
-y = df['species'].values
+X = df.drop('Species', axis=1).values
+y = df['Species'].values
 class_names = le.classes_
 
 # Normalize features
